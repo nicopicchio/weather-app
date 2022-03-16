@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import CityCard from './Components/CityCard/CityCard';
 
 function App() {
-	const initialLocation = 'London'
+	const initialLocation = 'London';
 	const [location, setLocation] = useState(initialLocation);
 	const [weather, setWeather] = useState();
 	console.log('RENDERING WEATHER APP', weather);
@@ -10,7 +10,7 @@ function App() {
 	const getLocation = () => {
 		fetch(`http://localhost:3001/api/location/search/?query=${location}`)
 			.then((res) => res.json())
-			.then((jsonResponse) => getWeather(jsonResponse[0].woeid))
+			.then((jsonResponse) => getWeather(jsonResponse[0].woeid));
 	};
 
 	const getWeather = (id) => {
@@ -20,7 +20,7 @@ function App() {
 	};
 
 	useEffect(() => {
-		if (!location) return
+		if (!location) return;
 		getLocation();
 	}, [location]);
 
