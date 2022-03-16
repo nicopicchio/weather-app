@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { logo } from './assets/logo.png';
+import CityCard from './Components/CityCard/CityCard';
 
 function App() {
 	const [location, setLocation] = useState('');
@@ -26,16 +26,22 @@ function App() {
 
 	return (
 		<>
-			<div className='container'>
-				{/* <img id='logo' alt='logo' src={logo} /> */}
+			<div className='header-container'>
+				<img src='/logo.png' id='logo' alt='logo' width='120px' />
 				<h1>Weather App</h1>
 				<form className='location-form' onSubmit={handleSubmit}>
 					<label className='input-label'>
-						Location
-						<input type='text' className='search-input' name='city' required />
+						<input
+							type='text'
+							className='search-input'
+							name='city'
+							placeholder='Search location...'
+							required
+						/>
 						<input type='submit' className='submit-button' value='Search' />
 					</label>
 				</form>
+				<CityCard weather={weather}/>
 			</div>
 		</>
 	);
