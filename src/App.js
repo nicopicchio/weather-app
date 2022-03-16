@@ -2,22 +2,27 @@ import { useState, useEffect } from 'react';
 import CityCard from './Components/CityCard/CityCard';
 
 function App() {
-	const [location, setLocation] = useState('');
-	const [woeID, setWoeID] = useState(0);
-	const [weather, setWeather] = useState({});
+	const initialLocation = 'London'
+	const [location, setLocation] = useState(initialLocation);
+	const [weather, setWeather] = useState();
 	console.log('RENDERING WEATHER APP', weather);
 
-	useEffect(() => {
+	const getLocation = () => {
 		fetch(`http://localhost:3001/api/location/search/?query=${location}`)
 			.then((res) => res.json())
-			.then((jsonResponse) => setWoeID(jsonResponse[0].woeid));
-	}, [location]);
+			.then((jsonResponse) => getWeather(jsonResponse[0].woeid))
+	};
 
-	useEffect(() => {
-		fetch(`http://localhost:3001/api/location/${woeID}`)
+	const getWeather = (id) => {
+		fetch(`http://localhost:3001/api/location/${id}`)
 			.then((res) => res.json())
 			.then((jsonResponse) => setWeather(jsonResponse));
-	}, [woeID]);
+	};
+
+	useEffect(() => {
+		if (!location) return
+		getLocation();
+	}, [location]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -41,7 +46,7 @@ function App() {
 						<input type='submit' className='submit-button' value='Search' />
 					</label>
 				</form>
-				<CityCard weather={weather}/>
+				<CityCard weather={weather} />
 			</div>
 		</>
 	);

@@ -10,7 +10,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: white;
+	color: #4f5d73;
 	height: 100vh;
 	background: #4f5d73;
 }
@@ -23,6 +23,7 @@ code {
 h1 {
 	font-size: 3rem;
 	padding-bottom: 2rem;
+	color: white;
 }
 
 #logo {
@@ -63,7 +64,7 @@ h1 {
 	width: 8rem;
 	border-radius: 12px;
 	border-style: none;
-	background: #ff9d4d;
+	background: #e0995e;
 	color: white;
 }
 
@@ -75,8 +76,44 @@ h1 {
 .weather-card {
 	width: 500px;
 	height: 700px;
-	border: 2px solid white;
 	border-radius: 8px;
 	background: white;
-	margin: 3rem auto;
+	margin: 2rem auto;
+	display: grid;
+	grid-template-rows: repeat(5, max-content);
+}
+
+.weather-card-title {
+	padding: 2.5rem;
+	font-size: 3rem;
+}
+
+.weather-card-current-weather-img {
+	display: block;
+	margin: auto;
+}
+
+.weather-state-name {
+	margin: 1.2rem;
+	font-size: 2rem;
+}
+
+.weather-card-temp {
+	color: #4f5d73;
+	font-size: 5.5rem;
+	margin-top: 1rem;
+}
+
+.weather-card-time {
+	font-size: 2rem;
+	margin: 2.8rem;
+}
+
+.weather-card-times {
+	display: flex;
+	justify-content: space-around;
+}
+
+.weather-card-sunrise-sunset {
+	font-size: 1.4rem;
 }
