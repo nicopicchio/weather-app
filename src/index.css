@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 code {
@@ -20,7 +21,7 @@ code {
 h1 {
   font-size: 3rem;
   padding: 2rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .container {
@@ -32,7 +33,7 @@ h1 {
 }
 
 .location-form {
-  margin: 4rem;
+  margin: 1rem;
 }
 
 .input-label {
@@ -47,10 +48,17 @@ h1 {
   font-size: 1.5rem;
   padding: 0.5rem;
   margin: 1rem;
-  width: 12rem;
+  width: 18rem;
   height: 3rem;
 }
 
 .submit-button {
+  font-size: 1.2rem;
   width: 8rem;
+  border-radius: 12px;
+  border-style: none;
+}
+
+.submit-button:hover {
+  background: #ff9d4d
 }
