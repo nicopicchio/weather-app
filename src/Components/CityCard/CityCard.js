@@ -1,5 +1,11 @@
 function CityCard({ weather }) {
 	if (!weather) return <h2>Loading data...</h2>;
+	let tempertureClass = 'weather-card-temp'
+	if (weather.consolidated_weather[0].the_temp <= 5) {
+		tempertureClass += '-low'
+	} else if (weather.consolidated_weather[0].the_temp > 5 && weather.consolidated_weather[0].the_temp < 30) {
+		tempertureClass += '-normal'
+	} else tempertureClass += '-high'
 	return (
 		<div className='weather-card'>
 			<h2 className='weather-card-title'>{weather.title}</h2>
@@ -12,7 +18,7 @@ function CityCard({ weather }) {
 			<h2 className='weather-state-name'>
 				{weather.consolidated_weather[0].weather_state_name}
 			</h2>
-			<h3 className='weather-card-temp'>
+			<h3 className={tempertureClass}>
 				{weather.consolidated_weather[0].the_temp.toFixed(1)} °C
 			</h3>
 			<h3 className='weather-card-time'>

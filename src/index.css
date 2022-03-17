@@ -98,8 +98,20 @@ h1 {
 	font-size: 2rem;
 }
 
-.weather-card-temp {
+.weather-card-temp-low {
+	color: rgb(52, 140, 255);
+	font-size: 5.5rem;
+	margin-top: 1rem;
+}
+
+.weather-card-temp-normal {
 	color: #4f5d73;
+	font-size: 5.5rem;
+	margin-top: 1rem;
+}
+
+.weather-card-temp-high {
+	color: rgb(255, 66, 66);
 	font-size: 5.5rem;
 	margin-top: 1rem;
 }
