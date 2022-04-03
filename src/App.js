@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CityCard from './Components/CityCard/CityCard';
+import Form from './Components/Form/Form';
 
 function App() {
 	const initialLocation = 'London';
@@ -30,25 +31,12 @@ function App() {
 	};
 
 	return (
-		<>
-			<div className='header-container'>
-				<img src='/logo.png' id='logo' alt='logo' width='120px' />
-				<h1>Weather App</h1>
-				<form className='location-form' onSubmit={handleSubmit}>
-					<label className='input-label'>
-						<input
-							type='text'
-							className='search-input'
-							name='city'
-							placeholder='Search location...'
-							required
-						/>
-						<input type='submit' className='submit-button' value='Search' />
-					</label>
-				</form>
-				<CityCard weather={weather} />
-			</div>
-		</>
+		<div className='header-container'>
+			<img src='/logo.png' id='logo' alt='logo' width='120px' />
+			<h1>Weather App</h1>
+			<Form handleSubmit={handleSubmit} />
+			<CityCard weather={weather} />
+		</div>
 	);
 }
 
