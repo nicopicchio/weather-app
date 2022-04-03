@@ -31,12 +31,18 @@ function App() {
 	};
 
 	return (
-		<div className='header-container'>
-			<img src='/logo.png' id='logo' alt='logo' width='120px' />
-			<h1>Weather App</h1>
-			<Form handleSubmit={handleSubmit} />
-			<CityCard weather={weather} />
-		</div>
+		<>
+			<div className='header-container'>
+				<img src='/logo.png' id='logo' alt='logo' width='120px' />
+				<h1>Weather App</h1>
+			</div>
+			<div className='form-container'>
+				<Form handleSubmit={handleSubmit} />
+			</div>
+			<div className='card-container'>
+				<CityCard weather={weather} />
+			</div>
+		</>
 	);
 }
 

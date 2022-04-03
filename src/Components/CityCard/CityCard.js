@@ -13,7 +13,7 @@ function CityCard({ weather }) {
 				className='weather-card-current-weather-img'
 				src={`https://www.metaweather.com/static/img/weather/${weather.consolidated_weather[0].weather_state_abbr}.svg`}
 				alt='current weather image'
-				width='170px'
+				width='120px'
 			/>
 			<h2 className='weather-state-name'>
 				{weather.consolidated_weather[0].weather_state_name}

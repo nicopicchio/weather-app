@@ -80,6 +80,7 @@ h1 {
 	background: white;
 	margin: 2rem auto;
 	display: grid;
+	text-align: center;
 	grid-template-rows: repeat(5, max-content);
 }
 
@@ -95,24 +96,24 @@ h1 {
 
 .weather-state-name {
 	margin: 1.2rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .weather-card-temp-low {
 	color: rgb(52, 140, 255);
-	font-size: 5.5rem;
+	font-size: 4rem;
 	margin-top: 1rem;
 }
 
 .weather-card-temp-normal {
 	color: #4f5d73;
-	font-size: 5.5rem;
+	font-size: 4rem;
 	margin-top: 1rem;
 }
 
 .weather-card-temp-high {
 	color: rgb(255, 66, 66);
-	font-size: 5.5rem;
+	font-size: 4rem;
 	margin-top: 1rem;
 }
 
@@ -123,7 +124,7 @@ h1 {
 
 .weather-card-times {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
 .weather-card-sunrise-sunset {
