@@ -22,7 +22,7 @@ function App() {
 
 	useEffect(() => {
 		if (!location) return;
-		else getLocation();
+		getLocation();
 	}, [location]);
 
 	const handleSubmit = (e) => {
