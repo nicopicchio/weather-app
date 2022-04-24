@@ -21,7 +21,7 @@ function App() {
 
 	useEffect(() => {
 		if (!location) return;
-		getLocation();
+		else getLocation();
 	}, [location]);
 
 	const handleSubmit = (e) => {
