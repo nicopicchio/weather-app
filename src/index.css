@@ -15,11 +15,6 @@ body {
 	background: #4f5d73;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-}
-
 h1 {
 	font-size: 3rem;
 	padding-bottom: 2rem;
@@ -129,4 +124,50 @@ h1 {
 
 .weather-card-sunrise-sunset {
 	font-size: 1.4rem;
+}
+
+@media screen and (max-width: 500px) {
+	.header-container {
+		display: grid;
+		grid-template-columns: 0.5fr 1fr;
+		place-items: center;
+		width: 100%;
+	}
+
+	h1 {
+		display: inline;
+		font-size: 2.6rem;
+		padding-bottom: 0;
+	}
+
+	#logo {
+		margin: auto;
+	}
+
+	.input-label {
+		font-size: 1.8rem;
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		place-items: center;
+		width: 100vw;
+	}
+
+	.submit-button {
+		margin: 0;
+	}
+
+	.weather-card {
+		width: 90vw;
+		height: 650px;
+		border-radius: 8px;
+		background: white;
+		margin: 2rem auto;
+		display: grid;
+		text-align: center;
+		grid-template-rows: repeat(5, max-content);
+	}
+
+	.weather-card-current-weather-img {
+		width: 120px;
+	}
 }
